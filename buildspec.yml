@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 20
+    commands:
+      - echo "Installing necessary tools"
+  build:
+    commands:
+      - echo "Building the project"
+      - mkdir -p output
+      - cp index.html output/
+
+artifacts:
+  files:
+    - output/index.html
